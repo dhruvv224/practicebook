@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Context } from '../Context/Context';
+import TaskDisp from './TaskDisp';
 
 const Home = () => {
   const { Task, setTask } = useContext(Context);
@@ -22,7 +23,8 @@ const Home = () => {
   console.log("input:", input);
 
   return (
-    <div className='max-w-[1200px] mt-[60px] mx-auto'>
+    <div>
+       <div className='max-w-[1200px] mt-[60px] mx-auto'>
       <div className='flex items-center justify-center'>
         <div className='card bg-white p-6 border rounded-lg shadow-lg w-full max-w-md'>
           <h1 className='text-2xl font-bold mb-6 text-center'>Enter Your Task</h1>
@@ -44,6 +46,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
+   <TaskDisp/>
     </div>
   );
 };
