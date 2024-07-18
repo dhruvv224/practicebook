@@ -1,11 +1,16 @@
-import React,{ createContext,useContext,useState} from "react";
-export const Context=createContext();
-export const ContexProvder=({children})=>{
-    const[Task,setTask]=useState([])
-    return
-    (
-        <Context.Provider value={{Task,setTask}}>
+
+import React, { createContext, useContext, useState } from 'react';
+
+const Context = createContext();
+
+const MyProvider = ({ children }) => {
+    const [Task, setTask] = useState([]);
+
+    return (
+        <Context.Provider value={{ Task, setTask }}>
             {children}
         </Context.Provider>
-    )
-}
+    );
+};
+
+export { Context, MyProvider };

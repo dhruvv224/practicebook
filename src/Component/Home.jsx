@@ -1,8 +1,20 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { useContext } from 'react';
+import { Context } from '../Context/Context';
 
 const Home = () => {
-    
+  const{Task}=useContext(Context)
+  console.log(Task)
+  const [input,setinput]=useState('')
+  const handleChange=(e)=>{
+    const value=e.target.value
+    console.log(value)
+    setinput(value)
+
+
+  }
+  console.log("input:",input)
+   
     return (
     <div className='max-w-[1200px] mt-[60px] mx-auto'>
       <div className='flex items-center justify-center'>
@@ -13,6 +25,7 @@ const Home = () => {
               type='text'
               className='w-full max-w-sm pl-4 pr-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 duration-150'
               placeholder='Enter something'
+              onChange={handleChange}
             />
             <button
               type='submit'
