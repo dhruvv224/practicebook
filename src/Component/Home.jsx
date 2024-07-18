@@ -11,7 +11,7 @@ const Home = () => {
             <input
               type='text'
               className='w-full max-w-sm pl-4 pr-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 duration-150'
-              placeholder='Enter somethingg'
+              placeholder='Enter something'
             />
             <button
               type='submit'
