@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Context } from '../Context/Context';
 
 const Home = () => {
-  const{Task}=useContext(Context)
+  const{Task,setTask}=useContext(Context)
   console.log(Task)
   const [input,setinput]=useState('')
   const handleChange=(e)=>{
@@ -12,6 +12,12 @@ const Home = () => {
     setinput(value)
 
 
+  }
+  const handleAddTasks=()=>{
+    if(input.trim())
+    {
+      setTask([...Task,{id:Date.now(),text:input}])
+    }
   }
   console.log("input:",input)
    
