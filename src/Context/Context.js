@@ -8,7 +8,7 @@ const MyProvider = ({ children }) => {
 
     return (
         <Context.Provider value={{ Task, setTask }}>
-            {children}
+            {childreen}
         </Context.Provider>
     );
 };
